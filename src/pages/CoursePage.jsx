@@ -3,9 +3,11 @@ import Heading from "../components/Heading";
 import ExampleBox from "../components/ExampleBox";
 import ConceptCard from "../components/ConceptCard";
 import GoBackButton from "../components/GoBackButton";
-import htmlData from "../data/React.json";
+import ReatJsData from "../data/React.json";
+import MongoData from "../data/MongoDB.json";
+import NodeData from "../data/Nodejs.json";
 
-const technologies = { HTML: htmlData };
+const technologies = { React: ReatJsData, MongoDB: MongoData, Nodejs: NodeData };
 
 export default function CoursePage() {
   const [selectedTech, setSelectedTech] = useState(null);
@@ -30,7 +32,7 @@ export default function CoursePage() {
     <div className="flex h-screen">
       {/* Sidebar */}
       <div className="w-1/5 bg-gray-200 p-4 overflow-y-auto">
-        <h2 className="text-lg font-bold mb-4">Web Technologies</h2>
+        <h2 className="text-lg font-bold mb-4">Full Stack Technologies</h2>
         {Object.keys(technologies).map((tech, idx) => (
           <button
             key={idx}
